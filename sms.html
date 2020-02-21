@@ -1,0 +1,31 @@
+<html>
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="ORA.ti" content="page title">
+        
+    <script src="odc.js"></script>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <title>sms test button</title>
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="sms.css">
+    <script type="text/javascript">  
+    function sentSMS(){  
+        var btn_txt =document.getElementById("btn_txt");  
+        btn_txt.innerHTML = "Done";
+        btn_txt.style.color = "green";
+    }  
+    </script>
+    
+    <div class="center">
+        <div class="select-button" onclick=" 
+            ORA.click({'data':{'ORA.SMS_fixed_':'55a', 'ORA._sms_':'55a'}}),
+            ORA.click({'data':{'ORA.SMS_fixed_':'1', 'ORA._sms_':'55b'}}),
+            ORA.click({'data':{'ORA.SMS_fixed_':'1', 'ORA._sms_':'55c'}}),
+            sentSMS()" >
+            <span id="btn_txt" class="btn_txt">Ready</span>
+        </div>
+    </div>
+</body>
+</html>
